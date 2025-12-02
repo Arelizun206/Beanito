@@ -4,10 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>BEANITO — Un sorbo de paraíso</title>
-
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
   <style>
     :root{
       --cream: #F4F1EC;
@@ -20,7 +18,6 @@
       --glass: rgba(255,255,255,0.06);
       --radius: 14px;
     }
-
     html,body{height:100%;}
     body{
       margin:0;
@@ -31,20 +28,15 @@
       -moz-osx-font-smoothing:grayscale;
       line-height:1.45;
     }
-
-    /* Layout */
     .container{max-width:1100px;margin:0 auto;padding:28px;}
     header{display:flex;align-items:center;justify-content:space-between;padding:18px 0;}
     .brand{display:flex;gap:14px;align-items:center;}
     .logo-wrap{width:64px;height:64px;display:flex;align-items:center;justify-content:center;border-radius:12px;background:linear-gradient(135deg,var(--warm-brown),#a46a4e);box-shadow:0 6px 20px rgba(122,76,53,0.12);}
     .brand h1{font-family:"Playfair Display";font-size:20px;margin:0;color:white;letter-spacing:1px;}
     .tag{font-size:12px;color:var(--accent);margin-top:2px}
-
     nav{display:flex;gap:18px;align-items:center;}
     nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:14px}
     nav a:hover{color:var(--warm-brown)}
-
-    /* Hero */
     .hero{
       margin-top:18px;
       border-radius:18px;
@@ -59,8 +51,6 @@
     .hero h2{font-family:"Playfair Display";font-size:48px;margin:0;line-height:1}
     .hero p{margin:0;opacity:0.95;font-size:18px}
     .cta{margin-top:12px;background:var(--accent);color:var(--warm-brown);padding:12px 20px;border-radius:12px;font-weight:700;text-decoration:none;display:inline-block}
-
-    /* mascot image area (right) */
     .hero-art{
       display:none;
       align-items:center;
@@ -70,35 +60,22 @@
         radial-gradient(circle at 20% 20%, rgba(255,255,255,0.02), transparent 6%),
         linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.0));
     }
-
-    /* Grid features */
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:30px}
     .card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:0 10px 30px rgba(16,16,16,0.06);overflow:hidden}
     .card .img{height:190px;background-size:cover;background-position:center;border-radius:12px;margin-bottom:12px}
-
     .card h3{margin:6px 0 8px 0;font-family:"Playfair Display";font-size:20px;color:var(--warm-brown)}
     .card p{margin:0;color:var(--muted);font-size:14px}
-
-    /* About / two columns */
     .two-col{display:grid;grid-template-columns: 1fr 1fr;gap:22px;margin-top:40px}
     .about{padding:22px;border-radius:12px;background:linear-gradient(180deg,rgba(250,248,245,0.7),#fff);box-shadow:0 12px 28px rgba(16,16,16,0.04)}
     .about h3{font-family:"Playfair Display";margin-top:0;color:var(--dark-olive)}
     .about p{color:var(--muted)}
-
-    /* menu */
     .menu{padding:22px;border-radius:12px;background:#FAF7F4;border:1px solid rgba(0,0,0,0.03)}
     .menu h4{margin:0 0 12px 0;color:var(--maroon);font-weight:700}
     .menu .row{display:flex;justify-content:space-between;padding:8px 0;color:var(--muted)}
     .menu .price{color:var(--warm-brown);font-weight:700}
-
-    /* footer */
     footer{margin-top:46px;padding:22px 0;text-align:center;color:var(--muted);font-size:14px}
-
-    /* mascot small */
     .mascot-small{display:inline-flex;align-items:center;gap:8px}
-    .mascot-small svg{width:34px;height:34px}
-
-    /* responsive */
+    .mascot-small img{width:34px;height:34px}
     @media (min-width:900px){
       .hero{grid-template-columns: 1fr 420px}
       .hero-art{display:flex}
@@ -110,8 +87,6 @@
       .two-col{grid-template-columns:1fr}
       .hero h2{font-size:34px}
     }
-
-    /* small accent text style for cards */
     .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--glass);font-size:12px;color:var(--warm-brown);font-weight:700;margin-top:10px}
   </style>
 </head>
@@ -121,27 +96,13 @@
     <header>
       <div class="brand">
         <div class="logo-wrap" aria-hidden="true">
-          <!-- simple bean mascot svg -->
-          <svg width="42" height="42" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Beanito logo">
-            <defs>
-              <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
-                <stop offset="0" stop-color="#8C5337"/>
-                <stop offset="1" stop-color="#6E3F2D"/>
-              </linearGradient>
-            </defs>
-            <ellipse cx="32" cy="32" rx="22" ry="28" fill="url(#g)"/>
-            <path d="M36 20c1.5 3 0.5 8-4 12" stroke="#3D2A22" stroke-width="2" stroke-linecap="round" fill="none"/>
-            <circle cx="26" cy="26" r="3" fill="#fff"/>
-            <circle cx="38" cy="26" r="3" fill="#fff"/>
-            <path d="M24 38c4 3 10 3 14 0" stroke="#3D2A22" stroke-width="2" stroke-linecap="round" fill="none"/>
-          </svg>
+          <img src="logo.png" alt="Beanito logo" width="42" height="42" style="display:block;max-width:100%;max-height:100%;border-radius:12px;">
         </div>
         <div>
           <h1 style="font-size:18px;margin:0;color:var(--warm-brown)">BEANITO</h1>
           <div class="tag">¡Un sorbo de paraíso!</div>
         </div>
       </div>
-
       <nav aria-label="Main navigation">
         <a href="#menu">Menú</a>
         <a href="#favorites">Favoritos</a>
@@ -154,56 +115,20 @@
       <div class="hero-inner">
         <div style="display:flex;align-items:center;gap:12px;">
           <div class="mascot-small" aria-hidden="true">
-            <!-- mini mascot -->
-            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" width="48" height="48">
-              <ellipse cx="32" cy="32" rx="20" ry="25" fill="#6E3F2D"/>
-              <circle cx="24" cy="26" r="3" fill="#fff"/>
-              <circle cx="40" cy="26" r="3" fill="#fff"/>
-              <path d="M24 40c4 3 10 3 14 0" stroke="#3D2A22" stroke-width="2" stroke-linecap="round" fill="none"/>
-            </svg>
+            <img src="logo.png" alt="" width="34" height="34" style="display:inline-block;vertical-align:middle;border-radius:10px;">
           </div>
-
           <div>
             <div style="font-size:13px;color:rgba(255,255,255,0.85);font-weight:600">CAFÉ & DISEÑO</div>
             <div style="font-size:12px;color:rgba(255,255,255,0.6);">Espíritu caribeño • Estética minimalista</div>
           </div>
         </div>
-
         <h2>BEANITO — <span style="color:var(--accent)">Un sorbo de paraíso</span></h2>
         <p>Un lugar para disfrutar café de origen con detalles de diseño, packaging lindo y sabores que recuerdan el calor del Caribe.</p>
-
         <a class="cta" href="#menu">Explorar Menú</a>
       </div>
-
       <div class="hero-art" aria-hidden="true">
-        <!-- decorative large mascot + mock cup -->
         <div style="text-align:center;">
-          <svg width="260" height="260" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="beanGrad" x1="0" x2="1">
-                <stop offset="0" stop-color="#8C5337"/>
-                <stop offset="1" stop-color="#6E3F2D"/>
-              </linearGradient>
-              <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
-                <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000" flood-opacity="0.18"/>
-              </filter>
-            </defs>
-
-            <g filter="url(#shadow)">
-              <ellipse cx="100" cy="92" rx="58" ry="76" fill="url(#beanGrad)"/>
-              <path d="M116 62c3 4 3 9-4 16" stroke="#3D2A22" stroke-width="3" stroke-linecap="round" fill="none"/>
-              <circle cx="86" cy="78" r="6" fill="#fff"/>
-              <circle cx="114" cy="78" r="6" fill="#fff"/>
-              <path d="M84 118c6 6 22 6 30 0" stroke="#3D2A22" stroke-width="3" stroke-linecap="round" fill="none"/>
-            </g>
-
-            <!-- small frog buddy -->
-            <g transform="translate(140,140) scale(0.55)">
-              <ellipse cx="12" cy="8" rx="12" ry="8" fill="#A7D57A"/>
-              <circle cx="8" cy="6" r="2" fill="#fff"/>
-              <circle cx="17" cy="6" r="2" fill="#fff"/>
-            </g>
-          </svg>
+          <img src="logo.png" alt="" width="180" height="180" style="max-width:100%;border-radius:24px;box-shadow:0 6px 24px rgba(0,0,0,0.07);">
         </div>
       </div>
     </section>
@@ -214,7 +139,6 @@
         <h2 style="font-family:'Playfair Display';margin:0;color:var(--dark-olive)">Favoritos del Paraíso</h2>
         <div style="color:var(--muted)">Selección curada • edición limitada</div>
       </div>
-
       <div class="grid" aria-hidden="false">
         <article class="card">
           <div class="img" style="background-image:url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=70')"></div>
@@ -222,14 +146,12 @@
           <p>Espuma sedosa con toque de vainilla, servido en vaso reutilizable con etiqueta Beanito.</p>
           <span class="pill">Favorito</span>
         </article>
-
         <article class="card">
           <div class="img" style="background-image:url('https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=1200&q=70')"></div>
           <h3>Matcha Frío</h3>
           <p>Matcha ceremonial batido con agua fría y leche de avena — refrescante y elegante.</p>
           <span class="pill">Vegano</span>
         </article>
-
         <article class="card">
           <div class="img" style="background-image:url('https://images.unsplash.com/photo-1551022371-82c9e1b1e1b7?auto=format&fit=crop&w=1200&q=70')"></div>
           <h3>Mocha Caramelo</h3>
@@ -246,10 +168,8 @@
         <p>En Beanito combinamos amor por el café de origen con sensibilidad por el diseño. Packaging minimalista, tipografías elegantes y una mascota simpática que nos recuerda que el café también puede ser juguetón.</p>
         <p style="margin-top:12px">Trabajamos con pequeños productores y tostadores locales para garantizar trazabilidad y frescura. Además ofrecemos opciones veganas y alternativas de leches vegetales.</p>
       </div>
-
       <aside class="menu" id="menu" aria-labelledby="menu-heading">
         <h4 id="menu-heading">Menú — Selección</h4>
-
         <div class="row"><div>Espresso</div><div class="price">$2.50</div></div>
         <div class="row"><div>Americano</div><div class="price">$3.00</div></div>
         <div class="row"><div>Latte (Vainilla / Natural)</div><div class="price">$4.50</div></div>
@@ -264,23 +184,17 @@
       <div style="max-width:900px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap">
         <div style="display:flex;gap:12px;align-items:center">
           <div style="width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#6E3F2D,#8C5337);display:flex;align-items:center;justify-content:center">
-            <!-- tiny bean svg -->
-            <svg viewBox="0 0 64 64" width="22" height="22" xmlns="http://www.w3.org/2000/svg" fill="#fff">
-              <ellipse cx="32" cy="32" rx="14" ry="18"/>
-            </svg>
+            <img src="logo.png" alt="" width="22" height="22" style="display:inline-block;vertical-align:middle;border-radius:8px;" />
           </div>
           <div style="font-size:14px;color:var(--warm-brown);font-weight:700">BEANITO</div>
         </div>
-
         <div style="color:var(--muted)">
           Calle Ficticia 123 • Ciudad • Lunes–Domingo 8:00–19:00
         </div>
       </div>
-
       <div style="margin-top:12px;color:var(--muted)">© <strong>BEANITO</strong> — Un sorbo de paraíso • Síguenos en Instagram</div>
     </footer>
   </div>
-
   <script>
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
